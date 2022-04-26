@@ -1,0 +1,35 @@
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+const n = parseInt(readline()); // the number of temperatures to analyse
+var inputs = readline().split(' ');
+
+var result = 0;
+var smallDiff = 10000;
+
+for (let i = 0; i < n; i++) {
+    const t = parseInt(inputs[i]);// a temperature expressed as an integer ranging from -273 to 5526
+    //console.debug("introduzido" + t)
+
+
+    //diferenca 
+    x = Math.abs(0-t);
+    if(smallDiff>x){
+        smallDiff = x;
+        result=t;
+    }
+    else if(smallDiff==x){
+        result = Math.abs(x);
+    }
+    
+   // console.debug(result)
+    
+
+}
+
+// Write an answer using console.log()
+// To debug: console.error('Debug messages...');
+
+console.log(result);
